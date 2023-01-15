@@ -73,14 +73,16 @@ def copy_all_to_another_location(src_folder, dst):
 dir(instance)
 '''
 
-'''Textbook example 
+'''
+# Example of showing PNG image 
 path = "D:\MRI_project\MRI_project\series0013-Body\img0001-43.878.dcm"
 np_array = numpy_img_from_dicom_path(path)
 image = Im.fromarray(np_array)
 image.show()
 '''
 
-'''Categorising all MRI files
+'''
+# Categorising all MRI files
 path = "D:/MRI_project/MRI_png(all)"
 for file in os.listdir(path):
     if file.endswith('.dcm'):
@@ -167,7 +169,8 @@ with open('D:/MRI_project/SeriesDescription.csv', 'r') as input_csv:
                 summary[cell] = 1
 '''
 
-'''# Write the summarized data to the output CSV file
+'''
+# Write the summarized data to the output CSV file
 with open('D:/MRI_project/SeriesDescription(Summary).csv', 'w', newline='') as output_csv:
     writer = csv.writer(output_csv)
     for string, count in summary.items():

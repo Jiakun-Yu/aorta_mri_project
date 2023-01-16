@@ -177,12 +177,16 @@ with open('D:/MRI_project/SeriesDescription(Summary).csv', 'w', newline='') as o
         writer.writerow([string, count])
 '''
 
-# not_aorta = "D:\MRI_project\MRI_project\series0053-Body\img0020--8.58671.dcm"
-# aorta = "D:\MRI_project\MRI_project\series0013-Body\img0003-43.878.dcm"
-# non_aorta_dicom = dcmread(not_aorta)
-# aorta_dicom = dcmread(aorta)
-# header = ['CardiacNumberOfImages', 'SequenceVariant', 'SeriesDate', 'SeriesDescription', 'SeriesInstanceUID', 'SeriesNumber', 'SeriesTime', 'SliceLocation', 'SliceThickness', 'SmallestImagePixelValue']
-# for x in range(len(header)):
-#     print(f'Attribute - {header[x]}: {getattr(non_aorta_dicom,header[x])}')
-#     print(f'{header[x]}: {getattr(aorta_dicom,header[x])}')
+'''
+# Checking potential attributes for classification 
+not_aorta = "D:\MRI_project\MRI_project\series0053-Body\img0020--8.58671.dcm"
+aorta = "D:\MRI_project\MRI_project\series0013-Body\img0003-43.878.dcm"
+non_aorta_dicom = dcmread(not_aorta)
+aorta_dicom = dcmread(aorta)
+header = ['CardiacNumberOfImages', 'SequenceVariant', 'SeriesDate', 'SeriesDescription', 'SeriesInstanceUID', 'SeriesNumber', 'SeriesTime', 'SliceLocation', 'SliceThickness', 'SmallestImagePixelValue']
+for x in range(len(header)):
+    print(f'Attribute - {header[x]}: {getattr(non_aorta_dicom,header[x])}')
+    print(f'{header[x]}: {getattr(aorta_dicom,header[x])}')
+'''
+
 
